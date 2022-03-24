@@ -15,5 +15,13 @@ class ShowPostsController extends Controller
         $request->validate([
             'post' => 'required|max:500',
         ]);
+
+            post::create([
+            'user_id' => Auth::user()->id,
+            'name'    => Auth::user()->name,
+            'post'   => $request->post,
+        ]);
+
+        return back();
     }
 }
