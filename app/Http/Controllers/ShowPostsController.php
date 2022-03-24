@@ -12,6 +12,9 @@ class ShowPostsController extends Controller
 
     public function postContents()
     {
-
+        $request->validate([
+            'post' => 'required|max:500',
+            'post' => 'required|min:1',
+        ]);
     }
 }
