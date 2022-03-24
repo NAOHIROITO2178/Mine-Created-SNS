@@ -14,7 +14,6 @@ class ShowPostsController extends Controller
     {
         $request->validate([
             'post' => 'required|max:500',
-            'post' => 'required|min:1',
         ]);
     }
 }
