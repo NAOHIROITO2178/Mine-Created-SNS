@@ -13,7 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
+Route::get('/', function () {
+    $posts = Post::all();
+    return view('showposts', compact('posts'));
+});
 
 Auth::routes();
 
