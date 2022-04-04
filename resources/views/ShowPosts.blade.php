@@ -11,7 +11,7 @@
                     <a class="btn btn-primary" href="{{ route('register') }}">新規登録して投稿</a>
                 </div>
             @else
-                {{ Form::text('newPosts', null, ['class' => 'form-control col-9 mr-auto']) }}
+                {{ Form::text('post', null, ['class' => 'form-control col-9 mr-auto']) }}
                 {{ Form::submit('投稿する', ['class' => 'btn btn-primary col-2']) }}
             @endguest
             </div>
