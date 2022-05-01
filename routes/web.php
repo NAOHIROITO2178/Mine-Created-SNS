@@ -15,10 +15,10 @@ use App\Models\Post;
 |
 */
 
-// Route::get('/', function () {
-//     $posts = Post::all();
-//     return view('showposts', compact('posts'));
-// });
+Route::get('/', function () {
+    $posts = Post::all();
+    return view('showposts', compact('posts'));
+});
 Route::get('/', [ShowPostsController::class, 'showPostsPage']);
 
 Auth::routes();
